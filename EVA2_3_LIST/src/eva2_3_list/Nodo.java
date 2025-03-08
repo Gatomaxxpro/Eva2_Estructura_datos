@@ -1,10 +1,17 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 package eva2_3_list;
 
-
+/**
+ *
+ * @author invitado
+ */
 public class Nodo {
-    private int valor;
+      private int valor;
     private Nodo siguiente;
     
     public Nodo(){
@@ -31,5 +38,4 @@ public class Nodo {
         this.valor = valor;
         this.siguiente = null;
     }
-    
 }

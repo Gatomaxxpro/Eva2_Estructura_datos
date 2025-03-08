@@ -11,11 +11,12 @@ package eva2_3_list;
  * @author invitado
  */
 public class Lista {
-    private Nodo inicio;
-    
+     private Nodo inicio;
+     private Nodo fin;
     public Lista (){
         inicio=null;//No hay nodos en la lista
-        
+         fin =null;
+         
     }
     //agregar un nodo al final de la lista
     public void add(int valor){
@@ -25,16 +26,22 @@ public class Lista {
         // Y si la lista esta vacia?
             if (inicio==null){
                 inicio=nuevo;
-                
+                fin =nuevo;
             }else{
+                
                 //MOVERNOS ASTA EL UILTIMO NODO
-                Nodo temp =inicio;
+                /*Nodo temp =inicio;
                 while(temp.getSiguiente()!=null){
                     //COMO ME MUEVO AL SIGUIENTE NODO?
                     temp=temp.getSiguiente();
                 }
                 //temp ya se encuentra en el ultimo nodo
-                temp.setSiguiente(nuevo);
+                temp.setSiguiente(nuevo);*/
+                //conctamos
+                fin.setSiguiente(nuevo);
+                //movemos fin al nuevo nodo (nuevo nodo)
+                   fin=nuevo;
+               
             } 
                 
         }
@@ -44,6 +51,5 @@ public class Lista {
            System.out.println("["+temp.getValor()+"]");
            temp=temp.getSiguiente();
        }
-    }
-    }
-
+    } 
+}
